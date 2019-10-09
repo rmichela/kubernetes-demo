@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "hello-service"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hello-service"
+  template:
+    metadata:
+      labels:
+        app: "hello-service"
+    spec:
+      containers:
+        - name: "hello-service"      
+          image: "tutum/hello-world" 
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - name: "http"
+              containerPort: 80
+              protocol: TCP
