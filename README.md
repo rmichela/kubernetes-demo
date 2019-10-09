@@ -71,3 +71,7 @@ spec:
 ## Find the external ELB name
 
 Then browse to <http://localhost:8080/>
+
+## References
+
+- <https://eksworkshop.com/>
