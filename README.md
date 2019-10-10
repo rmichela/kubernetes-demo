@@ -7,6 +7,7 @@
 - `aws-iam-authenticator`
 - `kubernetes-cli`
 - `k9s`
+- `kubectx`
 
 ## Create EKS cluster
 
@@ -23,7 +24,7 @@ eksctl create cluster \
 --node-ami auto
 
 # Verify the cluster is running
-kubectl get pods
+kubectl get pods --all-namespaces
 ```
 
 ## Create pods and a deployment
