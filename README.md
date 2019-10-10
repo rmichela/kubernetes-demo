@@ -11,6 +11,7 @@
 ## Create EKS cluster
 
 ```shell
+# Create a cluster, takes about 15 minutes
 eksctl create cluster \
 --name demo-cluster \
 --version 1.14 \
@@ -20,6 +21,8 @@ eksctl create cluster \
 --nodes-min 1 \
 --nodes-max 3 \
 --node-ami auto
+
+# Verify the cluster is running
 kubectl get pods
 ```
 
@@ -71,6 +74,12 @@ spec:
 ## Find the external ELB name
 
 Then browse to <http://localhost:8080/>
+
+## Clean up
+
+```shell
+eksctl delete cluster --name demo-cluster
+```
 
 ## References
 
