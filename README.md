@@ -74,7 +74,9 @@ spec:
 
 ## Find the external ELB name
 
-Then browse to <http://localhost:8080/>
+- `kubectl get service hello-service`
+- Copy load balancer address from `EXTERNAL-IP`
+- Browse to http://balancer-name:8080
 
 ## Clean up
 
